@@ -221,7 +221,7 @@ class StatusModule extends ReactContextBaseJavaModule implements LifecycleEventL
 
             jsonConfig.put("LogEnabled", (gethLogFilePath != null && logsEnabled));
             jsonConfig.put("LogFile", gethLogFilePath);
-            jsonConfig.put("LogLevel", TextUtils.isEmpty(this.logLevel) ? "ERROR" : this.logLevel.toUpperCase());
+            jsonConfig.put("LogLevel", this.logLevel.toUpperCase());
             jsonConfig.put("DataDir", dataDir);
             jsonConfig.put("NetworkId", customConfig.get("NetworkId"));
             try {
